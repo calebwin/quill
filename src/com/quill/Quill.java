@@ -42,13 +42,11 @@ public class Quill {
     public void setAdditionCost(double newCost) {
         handleBadCost(newCost);
         this.additionCost = newCost;
-        handleBadTranspositionCost();
     }
 
     public void setDeletionCost(double newCost) {
         handleBadCost(newCost);
         this.deletionCost = newCost;
-        handleBadTranspositionCost();
     }
 
     public void setSubstitutionCost(double newCost) {
@@ -59,7 +57,6 @@ public class Quill {
     public void setTranspositionCost(double newCost) {
         handleBadCost(newCost);
         this.transpositionCost = newCost;
-        handleBadTranspositionCost();
     }
 
     private double[][] resizeMatrix(double[][] matrix, int newLen) {
@@ -107,6 +104,7 @@ public class Quill {
      * @param an OperationType that specifies what operations to count
      */
     public double computeCost(String s1, String s2, OperationType operationType) {
+        handleBadTranspositionCost();
         if (s1 == null || s2 == null) {
             throw new IllegalArgumentException("Paarameters must not be null");
         }
