@@ -1,6 +1,3 @@
-# quill
-A high-level API for computing the edit distance between two strings
-
 ## What this is
 There are many sophisticated algorithms for calculating edit distance or the number of edits needed to change one string into another string. These algorithms compute a variety of metrics that count different types of edits (additions, deletions, substitutions, and/or transpositions). Quill packages three of these algorithms into a simple API.
 
